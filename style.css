@@ -1,0 +1,112 @@
+/* الألوان والديزاين الأساسي لـ طيران رنا ونوت */
+body {
+    background-color: #0d1b2a; /* لون أزرق غامق فخم جداً (لون السماء بالليل) */
+    color: #e0e1dd; /* لون كتابة أبيض مريح ونظيف */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl; /* الكتابة من اليمين لليسار عشان موقعنا عربي */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* حركة القلوب اللطيفة اللي بتطير في الخلفية */
+@keyframes floatHearts {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+.heart-bg {
+    position: fixed;
+    color: #ff4d6d; /* لون قلوب أحمر ووردي يجنن */
+    font-size: 24px;
+    animation: floatHearts 6s infinite linear;
+    z-index: 1;
+    bottom: -50px;
+}
+
+/* صناديق النوافذ (تسجيل الدخول والترحيب) */
+.form-container, .container {
+    background-color: #1b263b; /* لون كحلي متناسق يبرز النوافذ */
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 25px; /* حواف دائرية ناعمة وحلوة */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6); /* ظل فخم خلف الصندوق */
+    border: 2px solid #415a77; /* إطار أزرق هادئ */
+    position: relative;
+    z-index: 5;
+}
+
+/* تصميم الخانات اللي نكتب فيها الاسم والباسورد */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 90%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #415a77;
+    border-radius: 12px;
+    background-color: #0d1b2a;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* لما نضغط على خانة الكتابة تنور أزرق فاتح */
+input:focus {
+    border-color: #e63946;
+    outline: none;
+}
+
+/* الأزرار الرهيبة */
+button, .btn {
+    background-color: #e63946; /* لون أحمر دافئ وجذاب */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 95%;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #ff4d6d; /* يفتح اللون ويتحرك شوي لما نأشر عليه */
+    transform: scale(1.03);
+}
+
+/* تنسيق جدول الرحلات الجوية */
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background-color: #1b263b;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    border: 1px solid #415a77;
+}
+
+th {
+    background-color: #415a77;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* التوقيع الخاص برنا ونوت أسفل الصفحة */
+.signature {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #8196b0;
+    font-style: italic;
+}
